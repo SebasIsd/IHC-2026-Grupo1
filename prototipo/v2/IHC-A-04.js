@@ -142,6 +142,7 @@ function initAllergenModuleV2() {
                 const firstBtn = allergenModal.querySelector('button');
                 if (firstBtn) firstBtn.focus();
             }, 100);
+            console.log('✅ INCIDENCIA A-04 APLICADA EN VIVO: ' + new Date().toLocaleTimeString());
         }
     }
 

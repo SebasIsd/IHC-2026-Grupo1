@@ -135,7 +135,8 @@ function initChecklistModuleV2() {
             const now = new Date().toLocaleTimeString('es-ES', {
                 hour: '2-digit', minute: '2-digit', second: '2-digit'
             });
-            saveText.textContent = `Guardado · ${now}`;
+            //saveText.textContent = `Guardado · ${now}`;
+            saveText.textContent = `Guardado (Parche Incidencia) · ${now}`;
             saveBadge.classList.add('show');
 
             setTimeout(() => {
