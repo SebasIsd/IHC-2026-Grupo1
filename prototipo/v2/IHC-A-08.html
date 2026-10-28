@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UX - IHC-A-08: Persistencia de Checklist</title>
+    <link rel="stylesheet" href="IHC-A-08-12.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Dashboard UX</h1>
+            <span class="subtitle">Auditoría de Experiencia de Usuario</span>
+        </div>
+    </header>
+
+    <!-- Stepper Navigation -->
+    <nav class="stepper" role="tablist" aria-label="Progreso de auditoría">
+        <div class="stepper-step active" data-step="1">
+            <span class="step-number">1</span>
+            <span class="step-label">Información General</span>
+        </div>
+        <div class="stepper-step" data-step="2">
+            <span class="step-number">2</span>
+            <span class="step-label">Usabilidad</span>
+        </div>
+        <div class="stepper-step" data-step="3">
+            <span class="step-number">3</span>
+            <span class="step-label">Accesibilidad</span>
+        </div>
+        <div class="stepper-step" data-step="4">
+            <span class="step-number">4</span>
+            <span class="step-label">Diseño Visual</span>
+        </div>
+        <div class="stepper-step" data-step="5">
+            <span class="step-number">5</span>
+            <span class="step-label">Rendimiento</span>
+        </div>
+        <div class="stepper-step" data-step="6">
+            <span class="step-number">6</span>
+            <span class="step-label">Conclusión</span>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-label">
+            <span>Progreso de la auditoría</span>
+            <span id="progress-percentage">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+        </div>
+        <div id="save-badge" class="save-badge">
+            <span class="save-icon">✓</span>
+            <span class="save-text">Guardado</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Step 1: Información General -->
+        <section id="step-1" class="step-content active">
+            <h2>Paso 1: Información General</h2>
+            
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="1">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Nombre del producto/servicio documentado</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="1">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Público objetivo definido</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="1">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Plataforma/tecnología identificada</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="1">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Contexto de uso descrito</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="1">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Objetivos de negocio alineados</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Step 2: Usabilidad -->
+        <section id="step-2" class="step-content">
+            <h2>Paso 2: Usabilidad</h2>
+            
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="2">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Facilidad de aprendizaje evaluada</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="2">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Eficiencia de uso medida</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="2">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Memorabilidad verificada</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="2">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Tasa de errores registrada</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="2">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Satisfacción del usuario evaluada</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="2">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Heurísticas de Nielsen aplicadas</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Step 3: Accesibilidad -->
+        <section id="step-3" class="step-content">
+            <h2>Paso 3: Accesibilidad</h2>
+            
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="3">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Contraste de colores verificado (WCAG AA)</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="3">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Navegación por teclado funcional</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="3">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Labels ARIA implementados</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="3">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Texto alternativo en imágenes</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="3">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Tamaño de fuente legible (mínimo 16px)</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Step 4: Diseño Visual -->
+        <section id="step-4" class="step-content">
+            <h2>Paso 4: Diseño Visual</h2>
+            
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="4">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Paleta de colores consistente</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="4">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Tipografía legible y jerárquica</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="4">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Espaciado y alineación correctos</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="4">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Iconografía coherente</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="4">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Imágenes optimizadas y relevantes</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="4">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Principios de Gestalt aplicados</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Step 5: Rendimiento -->
+        <section id="step-5" class="step-content">
+            <h2>Paso 5: Rendimiento</h2>
+            
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="5">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Tiempo de carga < 3 segundos</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="5">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Optimización de imágenes</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="5">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Código minificado y comprimido</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="5">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Cache implementado</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="5">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Lazy loading en contenido pesado</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Step 6: Conclusión -->
+        <section id="step-6" class="step-content">
+            <h2>Paso 6: Conclusión</h2>
+            
+            <div class="checklist">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="6">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Resumen ejecutivo completado</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="6">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Recomendaciones priorizadas</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="6">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Plan de acción definido</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="6">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Métricas de éxito establecidas</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-step="6">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Documentación final revisada</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="stepper-navigation">
+            <button id="btn-prev" class="btn-secondary" disabled>
+                ← Anterior
+            </button>
+            <button id="btn-next" class="btn-primary">
+                Siguiente →
+            </button>
+        </div>
+    </main>
+
+    <script src="IHC-A-08.js"></script>
+</body>
+</html>
