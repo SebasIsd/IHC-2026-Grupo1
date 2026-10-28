@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IHC-A-02 v1 (Fallo)</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .item { border: 1px solid #ccc; padding: 10px; margin: 10px 0; display: flex; justify-content: space-between; }
+        /* FALLO: No hay estilo de foco visible */
+        button { padding: 8px 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Mi Pedido</h1>
+    <div id="carrito">
+        <div class="item">
+            <span>Café Americano - $2.00</span>
+            <!-- FALLO: Sin aria-label, sin confirmación -->
+            <button onclick="this.parentElement.remove()">Quitar</button>
+        </div>
+        <div class="item">
+            <span>Sánduche de Pollo - $3.50</span>
+            <button onclick="this.parentElement.remove()">Quitar</button>
+        </div>
+    </div>
+    <p>Total: $5.50</p>
+</body>
+</html>

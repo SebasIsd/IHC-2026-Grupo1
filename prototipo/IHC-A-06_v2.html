@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IHC-A-06 v2 (Corregido)</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; text-align: center; }
+        button { padding: 15px 30px; font-size: 18px; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        .btn-confirm { background: #2ecc71; }
+        .btn-pending { background: #f39c12; cursor: not-allowed; }
+        .btn-error { background: #e74c3c; }
+        .btn-success { background: #27ae60; cursor: default; }
+        button:disabled { opacity: 0.7; }
+    </style>
+</head>
+<body>
+    <h1>Resumen del Pedido</h1>
+    <p>Total a pagar: $5.50</p>
+    
+    <button id="btnConfirmar" class="btn-confirm" onclick="confirmarPedido()">Confirmar Pedido</button>
+    <button id="btnReintentar" class="btn-error" onclick="confirmarPedido()" style="display:none;">Reintentar</button>
+    
+    <p id="mensaje" style="margin-top: 20px; font-weight: bold;"></p>
+
+    <script>
+        let isProcessing = false;
+
+        function confirmarPedido() {
+            // CORRECCIÓN: Evitar duplicados
+            if (isProcessing) return;
+            isProcessing = true;
+
+            const btn = document.getElementById('btnConfirmar');
+            const btnRetry = document.getElementById('btnReintentar');
+            const msg = document.getElementById('mensaje');
+
+            // Estado 1: Pendiente
+            btn.className = 'btn-pending';
+            btn.disabled = true;
+            btn.innerText = 'Pendiente...';
+            btnRetry.style.display = 'none';
+            msg.innerText = 'Conectando con el servidor...';
+
+            // Simulación de red inestable (50% éxito, 50% fallo)
+            const exito = Math.random() > 0.5;
+
+            setTimeout(() => {
+                if (exito) {
+                    // Estado 2: Confirmado
+                    btn.className = 'btn-success';
+                    btn.innerText = 'Confirmado';
+                    msg.innerText = '¡Éxito! Orden #9988 generada.';
+                } else {
+                    // Estado 3: No confirmado
+                    btn.style.display = 'none';
+                    btnRetry.style.display = 'inline-block';
+                    msg.innerText = 'Error de red. No se pudo confirmar.';
+                    isProcessing = false; // Permite reintentar
+                }
+            }, 2500);
+        }
+    </script>
+</body>
+</html>

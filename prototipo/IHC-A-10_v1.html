@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IHC-A-10 v1 (Fallo)</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .stepper { display: flex; list-style: none; padding: 0; }
+        .step { padding: 10px 20px; background: #eee; margin-right: 5px; border-radius: 4px; }
+        /* FALLO: El paso activo solo se distingue por color */
+        .step.active { background: #3498db; color: white; font-weight: bold; }
+        .content { margin-top: 20px; padding: 20px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Dashboard UX</h1>
+    <!-- FALLO: Sin roles semánticos, sin aria-current -->
+    <ul class="stepper">
+        <li class="step active">1. Datos</li>
+        <li class="step">2. Checklist</li>
+        <li class="step">3. Finalizar</li>
+    </ul>
+
+    <div class="content">
+        <h2>Paso 1: Datos del participante</h2>
+        <p>Formulario de datos...</p>
+        <button onclick="alert('Avanzar (pero el lector no lo sabe)')">Siguiente</button>
+    </div>
+</body>
+</html>
