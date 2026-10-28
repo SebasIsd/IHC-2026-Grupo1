@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UX - IHC-A-12: Recuperación de Sesión</title>
+    <link rel="stylesheet" href="IHC-A-08-12.css">
+</head>
+<body>
+    <!-- Recovery Banner -->
+    <div id="recovery-banner" class="recovery-banner hidden" role="alert">
+        <div class="recovery-banner-content">
+            <span class="recovery-icon">🔄</span>
+            <div class="recovery-text">
+                <strong>Sesión recuperada</strong>
+                <p>Último paso completado: <span id="recovery-step">0</span> de 6</p>
+            </div>
+            <button id="btn-continue-session" class="btn-primary btn-small">
+                Continuar donde lo dejaste
+            </button>
+            <button id="btn-new-session" class="btn-secondary btn-small">
+                Nueva sesión
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Dashboard UX</h1>
+            <span class="subtitle">Auditoría de Experiencia de Usuario</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="checklist-section">
+            <h2>Lista de Verificación de Auditoría</h2>
+            
+            <div class="checklist-summary">
+                <div class="summary-stat">
+                    <span class="stat-number" id="completed-items">0</span>
+                    <span class="stat-label">Completados</span>
+                </div>
+                <div class="summary-stat">
+                    <span class="stat-number" id="pending-items">32</span>
+                    <span class="stat-label">Pendientes</span>
+                </div>
+                <div class="summary-stat">
+                    <span class="stat-number" id="completion-percentage">0%</span>
+                    <span class="stat-label">Progreso</span>
+                </div>
+            </div>
+            
+            <div class="checklist" id="audit-checklist">
+                <!-- Checklist items generados dinámicamente -->
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-category="general">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Producto/servicio documentado</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-category="general">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Público objetivo definido</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-category="usability">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Facilidad de aprendizaje evaluada</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-category="usability">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Eficiencia de uso medida</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-category="accessibility">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Contraste WCAG AA verificado</span>
+                </label>
+                
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox" data-category="accessibility">
+                    <span class="checkmark"></span>
+                    <span class="checklist-text">Navegación por teclado funcional</span>
+                </label>
+                
+                <!-- Más items... -->
+            </div>
+            
+            <button id="btn-close-session" class="btn-primary btn-large btn-close">
+                Cerrar sesión de auditoría
+            </button>
+        </section>
+    </main>
+
+    <!-- Session Close Modal (Bloqueo por éxito falso) -->
+    <div id="session-close-modal" class="modal" role="alertdialog" aria-labelledby="close-modal-title">
+        <div class="modal-content modal-warning">
+            <div class="modal-header">
+                <span class="modal-icon error">⚠️</span>
+                <h2 id="close-modal-title">No puedes cerrar la sesión</h2>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-message">
+                    La auditoría no está completa. Faltan los siguientes ítems por verificar:
+                </p>
+                
+                <div id="pending-items-list" class="pending-items">
+                    <!-- Items pendientes se generan dinámicamente -->
+                </div>
+                
+                <div class="modal-summary">
+                    <strong>Resumen:</strong>
+                    <p id="close-summary-text">Completados: 0 de 32 ítems (0%)</p>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button id="btn-review-pending" class="btn-primary">
+                    Revisar ítems pendientes
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Confirmation Modal -->
+    <div id="final-confirm-modal" class="modal" role="alertdialog" aria-labelledby="confirm-modal-title">
+        <div class="modal-content modal-success">
+            <div class="modal-header">
+                <span class="modal-icon success">✅</span>
+                <h2 id="confirm-modal-title">Auditoría completada</h2>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-message">
+                    Has completado todos los ítems de la auditoría. Resumen final:
+                </p>
+                
+                <div class="final-summary">
+                    <div class="summary-row">
+                        <span>Total de ítems:</span>
+                        <strong>32</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Completados:</span>
+                        <strong>32/32</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Progreso:</span>
+                        <strong>100%</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Fecha de auditoría:</span>
+                        <strong id="audit-date">-</strong>
+                    </div>
+                </div>
+                
+                <p class="modal-warning">
+                    ¿Estás seguro de que deseas cerrar la sesión de auditoría?
+                </p>
+            </div>
+            
+            <div class="modal-footer">
+                <button id="btn-cancel-close" class="btn-secondary">
+                    Cancelar
+                </button>
+                <button id="btn-confirm-close" class="btn-primary btn-danger">
+                    Sí, cerrar sesión
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="IHC-A-12.js"></script>
+</body>
+</html>
