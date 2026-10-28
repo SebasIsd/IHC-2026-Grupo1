@@ -30,8 +30,8 @@ El Stepper original permite activar etapas posteriores sin completar requisitos 
 El paso siguiente permanece bloqueado hasta marcar los elementos obligatorios. Al intentar avanzar se explica el requisito faltante; volver conserva las marcas.
 
 - Wireframe: [IHC-A-07-stepper.svg](../wireframes/IHC-A-07-stepper.svg).
-- Prototipo v1: [IHC-A-07.svg](../prototipo/v1/IHC-A-07.svg).
-- Prototipo v2: [IHC-A-07.svg](../prototipo/v2/IHC-A-07.svg).
+- Prototipo v1: [IHC-A-07.png](../prototipo/v1/IHC-A-07.png).
+- Prototipo v2: [IHC-A-07.png](../prototipo/v2/IHC-A-07.png).
 
 Bloquear el avance previene estados inválidos; las etiquetas textuales complementan el color y el regreso reduce la carga de memoria.
 
@@ -44,3 +44,7 @@ La prueba individual está en [IHC-A-07-prueba.md](../pruebas/IHC-A-07-prueba.md
 Se aplicó la incidencia sorpresa: bloquear avances inválidos con explicación y permitir regresar sin perder marcas. Pregunta de defensa: **¿Cómo aplica la visibilidad del estado del sistema de Nielsen?**
 
 Diagrama completo: [IHC-A-07.md](../diagramas/IHC-A-07.md).
+
+## Enlaces de Figma
+
+- Archivo general o comparativa IHC-A-07: **[https://www.figma.com/design/1ejQ6tKfQIjuBxaEx5diQX/IHC-A-07-%C2%B7-Dashboard-UX-%C2%B7-Stepper-validado?node-id=0-1&t=xqkyOtPXCkqRWuUd-1]**

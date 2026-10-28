@@ -29,8 +29,8 @@ En 360 px la Card UI se superpone al Stepper y oculta campos. La persona pierde 
 El diseño usa una sola columna, conserva el orden Stepper → título → card → acción y permite desplazamiento vertical sin anchos fijos.
 
 - Wireframe: [IHC-A-11-responsive.svg](../wireframes/IHC-A-11-responsive.svg).
-- Prototipo v1: [IHC-A-11.svg](../prototipo/v1/IHC-A-11.svg).
-- Prototipo v2: [IHC-A-11.svg](../prototipo/v2/IHC-A-11.svg).
+- Prototipo v1: [IHC-A-11.png](../prototipo/v1/IHC-A-11.png).
+- Prototipo v2: [IHC-A-11.png](../prototipo/v2/IHC-A-11.png).
 
 La proximidad agrupa etiquetas y controles, mientras que el cierre conserva la Card como unidad visual.
 
@@ -43,3 +43,7 @@ La prueba individual está en [IHC-A-11-prueba.md](../pruebas/IHC-A-11-prueba.md
 Se aplicó la incidencia sorpresa: reorganizar el layout responsivo preservando el orden lógico del foco y evitando superposiciones. Pregunta de defensa: **¿Qué ley Gestalt aplica y qué carga cognitiva se reduce?**
 
 Diagrama completo: [IHC-A-11.md](../diagramas/IHC-A-11.md).
+
+## Enlaces de Figma
+
+- Archivo general o comparativa IHC-A-11: **[https://www.figma.com/design/ANiD5rm5pV9j2v5RqNtN2U/IHC-A-11-%C2%B7-Dashboard-UX-%C2%B7-Layout-responsive?t=fPuHji7o352McuE1-1]**

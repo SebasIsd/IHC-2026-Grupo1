@@ -29,8 +29,8 @@ La pantalla original comunica «Listo», pero no confirma qué pedido se recibi�
 La pantalla de éxito muestra estado inequívoco, identificador simulado, desglose y acción de salida. La transición «Procesando pedido» evita confundir clic con confirmación; el error ofrece reintento.
 
 - Wireframe: [IHC-A-03-confirmacion.svg](../wireframes/IHC-A-03-confirmacion.svg).
-- Prototipo v1: [IHC-A-03.svg](../prototipo/v1/IHC-A-03.svg).
-- Prototipo v2: [IHC-A-03.svg](../prototipo/v2/IHC-A-03.svg).
+- Prototipo v1: [IHC-A-03.png](../prototipo/v1/IHC-A-03.png).
+- Prototipo v2: [IHC-A-03.png](../prototipo/v2/IHC-A-03.png).
 
 La decisión principal es usar `#CU-104` para confirmar la operación sin exponer información personal.
 
@@ -43,3 +43,7 @@ La prueba individual está en [IHC-A-03-prueba.md](../pruebas/IHC-A-03-prueba.md
 Se aplicó la incidencia sorpresa: mostrar identificador simulado, desglose completo y estado inequívoco. Pregunta de defensa: **¿Cómo evita confundir clic efectuado con pedido confirmado?**
 
 Diagrama completo: [IHC-A-03.md](../diagramas/IHC-A-03.md).
+
+## Enlaces de Figma
+
+- Archivo general o comparativa IHC-A-03: **[https://www.figma.com/design/bwMfsWzUceEgnOhJT0PUnG/IHC-A-03-%C2%B7-Caf%C3%A9U-%C2%B7-Confirmaci%C3%B3n-y-privacidad?node-id=0-1&t=fPuHji7o352McuE1-1]**
