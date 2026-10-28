@@ -28,6 +28,7 @@
   - ✅ Estado diferenciado: Guardado/Pendiente
   - ✅ Datos persisten entre pasos y recargas
 
+![despues](../prototipo/capturas/despues-a08.png)
 ---
 
 ## 📊 Métricas de Mejora

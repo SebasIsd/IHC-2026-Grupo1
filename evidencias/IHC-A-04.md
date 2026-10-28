@@ -28,6 +28,7 @@
   - ✅ Botones "Entendido, añadir" y "Volver a editar"
   - ✅ Validación antes de confirmar pedido
 
+![despues](../prototipo/capturas/despues-a04.png)
 ---
 
 ## 📊 Métricas de Mejora
